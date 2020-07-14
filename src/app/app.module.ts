@@ -11,6 +11,9 @@ import { AddressComponent } from './address/address.component';
 import { CreateAddressComponent } from './address/create-address.component';
 import { BusinessLocationComponent } from './businesslocation/business-location.component';
 import { CreateBusinessLocationComponent } from './businesslocation/create-business-location.component';
+import { AddressModuleModule } from './address/address-module.module';
+import { HeaderComponent } from './header.component';
+import { SearchAddressResultsComponent } from './address/search-address-results.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +25,14 @@ import { CreateBusinessLocationComponent } from './businesslocation/create-busin
     AddressComponent,
     CreateAddressComponent,
     BusinessLocationComponent,
-    CreateBusinessLocationComponent
+    CreateBusinessLocationComponent,
+    HeaderComponent,
+    SearchAddressResultsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AddressModuleModule
   ],
   providers: [],
   bootstrap: [AppComponent]

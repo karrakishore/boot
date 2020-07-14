@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateAddressComponent implements OnInit {
 
+  addressCreated: boolean;
   constructor() { }
 
   ngOnInit(): void {
+    this.addressCreated = false;
+  }
+
+  get tomorrowDate() {
+    const today = new Date();
+    return new Date(today.setDate(today.getDate() + 1));
+  }
+
+  onCreate() {
+    this.addressCreated = true;
+  }
+
+  onClear() {
+    this.addressCreated = false;
   }
 
 }

@@ -11,4 +11,24 @@ font-size: large;
     background-image: url("../src/assets/images/postnordBackGround.jpg");
 }
 
+.space {
+    margin: 10px;
+}
 
+.vl {
+    border-left: 1px solid blue;
+    height: 100%;
+    position: absolute;
+    left: 25%;
+    margin-left: -3px;
+    top: 0;
+  }
+
+  .fixWidth {
+      width: 183px;
+  }
+
+  table, th, td {
+    border: 1px solid blue;
+    border-collapse: collapse;
+  }

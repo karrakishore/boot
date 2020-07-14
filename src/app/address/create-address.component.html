@@ -1,35 +1,79 @@
-<div class = 'container'> 
-    <table>
-        <th>
-        <h3>Create Address</h3>
-        </th>
-        <tr>
-            <td>
-                GPS X:
-            </td>
-            <td>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                GPS Y:
-            </td>
-            <td>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                GPS Z:
-            </td>
-            <td>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button type="button" class="btn btn-secondary">Submit</button></td>
-        </tr>
-    </table>
+<div class='container-fluid'>
+    <div class="row space">
+        <span class="border-0">
+            <h3>Create Address</h3>
+        </span>
+    </div>
+
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">GPS X:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+        <div class="col-md-2">
+            <span class="border-0">GPS Y:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+    </div>
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">GPS Z:</span>
+        </div>
+        <div class="col-md-2">
+            <input type="text">
+        </div>
+    </div>
+
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">Country Code:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+        <div class="col-md-2">
+            <span class="border-0">Primary Language:</span>
+        </div>
+        <div class="col-md-3">
+            <select id="primaryLanguage" name="primaryLanguage" class="fixWidth">
+                <option>Select</option>
+                <option value="o">English</option>
+                <option value="h">Swedish</option>
+                <option value="p">Hindi</option>
+                <option value="c">Spanish</option>
+                <option value="f">French</option>
+              </select>
+        </div>
+    </div>
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">Valid From:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text" [value]="tomorrowDate">
+        </div>
+        <div class="col-md-2">
+            <span class="border-0">Valid To:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+    </div>
+    <div class="row space">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-primary" (click) = "onCreate()">Create</button>
+        </div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-primary" (click) = "onClear()">Clear</button>
+        </div>
+
+    </div>
+    <div class="row space" *ngIf = "addressCreated">
+        <span><b>Address is created with ID : 1234509</b></span>
+    </div>
 </div>

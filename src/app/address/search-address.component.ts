@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchAddressComponent implements OnInit {
 
+  showResults: boolean;
   constructor() { }
 
   ngOnInit(): void {
+    this.showResults = false;
+  }
+
+  onSearch() {
+    this.showResults = true;
+  }
+
+  onClear() {
+    this.showResults = false;
   }
 
 }

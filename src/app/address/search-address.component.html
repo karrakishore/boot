@@ -14,68 +14,109 @@
     </div>
 </div> -->
 
-<div class = 'container'> 
-    <div class="row">
-        <div class = "col">
-            <span class="border-0">Search Address</span>
-        </div>        
+<div class='container-fluid'>
+    <div class="row space">
+        <span class="border-0">
+            <h3>Search Address</h3>
+        </span>
     </div>
-    <div class="row">
-        <div class="col">
-            <span class="border-0">GPS X:</span>
-          </div>
-          <div class="col">
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">Address Id:</span>
+        </div>
+        <div class="col-md-3">
             <input type="text">
-          </div>
+        </div>
+        <div class="col-md-2">
+            <span class="border-0">Address Type:</span>
+        </div>
+        <div class="col-md-3">
+            <select id="addressType" name="addressType" class="fixWidth">
+                <option>Select</option>
+                <option value="o">Office</option>
+                <option value="h">Home</option>
+                <option value="p">Permenant</option>
+                <option value="c">Communication</option>
+              </select>
+        </div>
     </div>
-    <div class="row">
-        <div class="col">
-            <span class="border-0">GPS X:</span>
-          </div>
-          <div class="col">
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">Street Name:</span>
+        </div>
+        <div class="col-md-3">
             <input type="text">
-          </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <span class="border-0">GPS X:</span>
-          </div>
-          <div class="col">
+        </div>
+        <div class="col-md-2">
+            <span class="border-0">Street Number:</span>
+        </div>
+        <div class="col-md-3">
             <input type="text">
-          </div>
+        </div>
     </div>
-    <table class="shadow-lg p-3 mb-5 bg-white rounded">
-        <th>
-        <h3>Search Address</h3>
-        </th>
-        <tr>
-            <td>
-                <span class="border-0">GPS X:</span>
-            </td>
-            <td>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <span class="border-0">GPS Y:</span>
-            </td>
-            <td>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <span class="border-0">GPS Z:</span>
-            </td>
-            <td>
-                <input type="text">
-            </td>
-        </tr>
-        <tr>
-            <td></td>
-            <td><button type="button" class="btn btn-secondary">Submit</button></td>
-        </tr>
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">Village Name:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+        <div class="col-md-2">
+            <span class="border-0">Farm Name:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+    </div>
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">City:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+        <div class="col-md-2">
+            <span class="border-0">Country:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+    </div>
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">Postal Code:</span>
+        </div>
+        <div class="col-md-2">
+            <input type="text">
+        </div>
+    </div>
+    <div class="row space">
+        <div class="col-md-2">
+            <span class="border-0">GPS X:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+        <div class="col-md-2">
+            <span class="border-0">GPS Y:</span>
+        </div>
+        <div class="col-md-3">
+            <input type="text">
+        </div>
+    </div>
+    <div class="row space">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-primary" (click) = "onSearch()">Search</button>
+        </div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-primary" (click) = "onClear()">Clear</button>
+        </div>
 
-    </table>
+    </div>
+
+<div *ngIf = "showResults" class="row space">
+    <app-search-address-results></app-search-address-results>
+</div>
+
 </div>
